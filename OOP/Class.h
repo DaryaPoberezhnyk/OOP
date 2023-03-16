@@ -52,7 +52,6 @@ public:
 		cout << " Pages: " << pages << endl;
 		cout << endl;
 	}
-
 };
 class Woker
 {
@@ -85,7 +84,6 @@ public:
 	{
 		return cash;
 	}
-
 	void d1() const
 	{
 		cout << " PIB: " << pib << endl;
@@ -94,5 +92,4 @@ public:
 		cout << " Salary: " << cash << endl;
 		cout << endl;
 	}
-
 };
