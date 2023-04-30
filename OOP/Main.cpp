@@ -1,5 +1,7 @@
 #include"menu.h"
-#include "Class.h"
+#include "Dog.h"
+#include "Cat.h"
+#include "Parrot.h"
 
 int main() {
 
@@ -12,80 +14,33 @@ int main() {
 	Menu* menu = new Menu;
 	menu->Vmenu();
 	char switch_on;
-
 	do
 	{
 		switch_on = _getch();
 		switch (switch_on)
 		{
-		case '0':
-		{
-			break;
-		}break;
 		case '1':
 		{
-			CharStack stack(5);
-			stack.push('a');
-			stack.push('b');
-			stack.push('c');
-			stack.push('d');
-			stack.push('e');
+			Pet* pet = new Pet;
+			Dog* dog = new Dog("Sharik", "German Shepherd", "Black");
+			Cat* cat = new Cat("Murzik", "Persian", "White");
+			Parrot* parrot = new Parrot("Kesha", "African Grey", "Green");
+			cout << "Dog: " << endl;
+			dog->Print_info();
+			cout << "Cat: " << endl;
+			cat->Print_info();
+			cout << "Parrot: " << endl;
+			parrot->Print_info();
+			delete pet;
+			delete dog;
+			delete cat;
+			delete parrot;
 
-			cout << "Count: " << stack.count() << endl;
-			cout << "Is empty? " << stack.isEmpty() << endl;
-			cout << "Is full? " << stack.isFull() << endl;
-
-			while (!stack.isEmpty()) {
-				cout << stack.pop() << " ";
-			}
-			cout << endl;
-
-			stack.push('f');
-			stack.push('g');
-			cout << "Peek: " << stack.peek() << endl;
-			stack.pop();
-			cout << "Peek: " << stack.peek() << endl;
-
-			stack.clear();
-			cout << "Count: " << stack.count() << endl;
-			cout << "Is empty? " << stack.isEmpty() << endl;
-			cout << "Is full? " << stack.isFull() << endl;
 
 		}break;
-		case '2':
-		{
-			DynamicStack stack(5);
-
-			stack.push('a');
-			stack.push('b');
-			stack.push('c');
-			stack.push('d');
-			stack.push('e');
-			stack.push('f');
-			stack.push('g');
-
-			cout << "Count: " << stack.count() << endl;
-			cout << "Is empty? " << stack.isEmpty() << endl;
-			cout << "Is full? " << stack.isFull() << endl;
-
-			while (!stack.isEmpty()) {
-				cout << stack.pop() << " ";
-			}
-			cout << endl;
-
-			cout << "Peek: " << stack.peek() << endl;
-			stack.pop();
-			cout << "Peek: " << stack.peek() << endl;
-
-			stack.clear();
-			cout << "Count: " << stack.count() << endl;
-			cout << "Is empty? " << stack.isEmpty() << endl;
-			cout << "Is full? " << stack.isFull() << endl;
-
-		}break;
+		default:
+			break;
 		}
-
-
-	} while (switch_on != '0');
+	} while (true);
 	return 0;
 }
