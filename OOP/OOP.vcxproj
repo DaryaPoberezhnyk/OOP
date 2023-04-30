@@ -133,6 +133,7 @@
     <ClInclude Include="Class.h" />
     <ClInclude Include="Library.h" />
     <ClInclude Include="Menu.h" />
+    <ClInclude Include="Print.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
