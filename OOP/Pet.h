@@ -7,7 +7,7 @@ protected:
 	string breed;
 public:
 	Pet() {
-		this->name = "No name";
+		this->name = "No name ";
 		this->breed = "No breed";
 	}
 	Pet(string name, string breed) {
